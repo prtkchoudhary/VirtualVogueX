@@ -42,7 +42,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: "http://localhost:3000", // location of react frontend
+    origin: "http://54.205.90.24:5000", // location of react frontend
     credentials: true,
   })
 );
@@ -68,7 +68,7 @@ app.get("/api/get-artoken", (req, res) => {
 
 
 // Use CORS to allow frontend access
-app.use(cors({ origin: "http://localhost:3000" })); // adjust for frontend URL
+app.use(cors({ origin: "http://54.205.90.24:5000/" })); // adjust for frontend URL
 
 // Route to send the API token
 app.get("/api/token", (req, res) => {
@@ -103,7 +103,7 @@ app.get('/google/callback',
   passport.authenticate('google', { failureRedirect: '/login' }),
   function(req, res) {
     // Successful authentication, redirect home.
-    res.redirect('http://localhost:3000/profile');
+    res.redirect('http://54.205.90.24:5000/profile');
   });
 
   app.post("/login", async (req, res, next) => {
