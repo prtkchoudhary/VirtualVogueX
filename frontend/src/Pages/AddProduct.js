@@ -29,7 +29,7 @@ export default function AddProduct() {
         lensGroupId: lensGroupId, // Send lensGroupId in the request
       },
       withCredentials: true,
-      url: "http://54.205.90.24:5000/addproduct",
+      url: "https://54.205.90.24:5000/addproduct",
     })
       .then((res) => {
         console.log(res);

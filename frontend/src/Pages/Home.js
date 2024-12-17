@@ -15,7 +15,7 @@ class Home extends Component {
   };
 
   componentDidMount() {
-    fetch("http://54.205.90.24:5000/getfeaturedproducts")
+    fetch("https://54.205.90.24:5000/getfeaturedproducts")
       .then((res) => res.json())
       .then((data) => {
         this.setState({ products: data });

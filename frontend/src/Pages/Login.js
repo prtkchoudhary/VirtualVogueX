@@ -25,7 +25,7 @@ export default function Login() {
         email: registerEmail,
       },
       withCredentials: true,
-      url: "http://54.205.90.24:5000/register",
+      url: "https://54.205.90.24:5000/register",
     }).then((res) => {
       console.log(res);
       alert(res.data);
@@ -42,7 +42,7 @@ export default function Login() {
         adminCode: adminCode, // Send the admin code for validation
       },
       withCredentials: true,
-      url: "http://54.205.90.24:5000/login",
+      url: "https://54.205.90.24:5000/login",
     })
       .then((res) => {
         console.log(res);
@@ -62,7 +62,7 @@ export default function Login() {
   };
 
   const googleAuth = () => {
-    window.open("http://54.205.90.24:5000/google");
+    window.open("https://54.205.90.24:5000/google");
   };
 
   return (

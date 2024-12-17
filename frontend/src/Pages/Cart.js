@@ -22,7 +22,7 @@ class Cart extends Component {
     Axios({
       method: "GET",
       withCredentials: true,
-      url: "http://54.205.90.24:5000/getcartitems",
+      url: "https://54.205.90.24:5000/getcartitems",
     }).then((res) => {
 
       if (res.data === "Please log in to proceed!"){
@@ -39,7 +39,7 @@ class Cart extends Component {
     Axios({
       method: "GET",
       withCredentials: true,
-      url: "http://54.205.90.24:5000/getwishlistitems",
+      url: "https://54.205.90.24:5000/getwishlistitems",
     }).then((res) => {
 
       if (res.data === "Please log in to proceed!"){
@@ -61,7 +61,7 @@ class Cart extends Component {
       data:{
         productId: productId,
       },
-      url: "http://54.205.90.24:5000/movetowishlist",
+      url: "https://54.205.90.24:5000/movetowishlist",
     }).then((res) => {
       console.log(res);
       window.location.reload(false);
@@ -77,7 +77,7 @@ class Cart extends Component {
       data:{
         productId: productId,
       },
-      url: "http://54.205.90.24:5000/removefromcart",
+      url: "https://54.205.90.24:5000/removefromcart",
     }).then((res) => {
       console.log(res);
       window.location.reload(false);
@@ -93,7 +93,7 @@ class Cart extends Component {
       data:{
         productId: productId,
       },
-      url: "http://54.205.90.24:5000/removefromwishlist",
+      url: "https://54.205.90.24:5000/removefromwishlist",
     }).then((res) => {
       console.log(res);
       window.location.reload(false);
@@ -109,7 +109,7 @@ class Cart extends Component {
       data:{
         productId: productId,
       },
-      url: "http://54.205.90.24:5000/movetocart",
+      url: "https://54.205.90.24:5000/movetocart",
     }).then((res) => {
       console.log(res);
       window.location.reload(false);
@@ -125,7 +125,7 @@ class Cart extends Component {
       data:{
         productId: productId,
       },
-      url: "http://54.205.90.24:5000/buyproduct",
+      url: "https://54.205.90.24:5000/buyproduct",
     }).then((res) => {
       console.log(res.data);
       window.location.reload(false);
@@ -138,7 +138,7 @@ class Cart extends Component {
     Axios({
       method: "POST",
       withCredentials: true,
-      url: "http://54.205.90.24:5000/buyallproducts",
+      url: "https://54.205.90.24:5000/buyallproducts",
     }).then((res) => {
       console.log(res.data);
       window.location.reload(false);

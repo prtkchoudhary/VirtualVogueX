@@ -15,7 +15,7 @@ export default function AddProduct() {
 
       },
       withCredentials: true,
-      url: "http://54.205.90.24:5000/changeprice",
+      url: "https://54.205.90.24:5000/changeprice",
     }).then((res) => console.log(res));
   };
 

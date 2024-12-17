@@ -28,7 +28,7 @@ export default function EditProduct() {
   const checkAdminStatus = async () => {
     setLoading(true);
     try {
-      const res = await Axios.get("http://54.205.90.24:5000/check-admin", {
+      const res = await Axios.get("https://54.205.90.24:5000/check-admin", {
         withCredentials: true,
       });
       if (res.data.isAdmin) {
@@ -46,7 +46,7 @@ export default function EditProduct() {
   };
 
   const fetchProducts = () => {
-    Axios.get("http://54.205.90.24:5000/getproducts", { withCredentials: true })
+    Axios.get("https://54.205.90.24:5000/getproducts", { withCredentials: true })
       .then((res) => setProducts(res.data))
       .catch((error) => console.error("Error fetching products:", error));
   };
@@ -82,7 +82,7 @@ export default function EditProduct() {
       return;
     }
 
-    Axios.delete(`http://54.205.90.24:5000/deleteproduct/${selectedProductId}`, {
+    Axios.delete(`https://54.205.90.24:5000/deleteproduct/${selectedProductId}`, {
       withCredentials: true,
     })
       .then(() => {
@@ -109,7 +109,7 @@ export default function EditProduct() {
     };
 
     Axios.put(
-      `http://54.205.90.24:5000/updateproduct/${selectedProductId}`,
+      `https://54.205.90.24:5000/updateproduct/${selectedProductId}`,
       updatedProductData,
       { withCredentials: true }
     )
