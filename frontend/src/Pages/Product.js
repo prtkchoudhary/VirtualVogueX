@@ -24,7 +24,7 @@ class Product extends Component {
   // Fetch the API token from the backend
   fetchApiToken = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/token"); // Adjust URL as needed
+      const response = await fetch("http://54.205.90.24:5000/api/token"); // Adjust URL as needed
       const data = await response.json();
       this.setState({ apiToken: data.apiToken });
       console.log("Fetched API Token:", data.apiToken); // For debugging
@@ -38,7 +38,7 @@ class Product extends Component {
     let url = window.location.pathname;
     let prod_id = url.split("/")[2];
 
-    fetch(`http://localhost:5000/getproductbyid/${prod_id}`)
+    fetch(`http://54.205.90.24:5000/getproductbyid/${prod_id}`)
       .then((res) => res.json())
       .then((data) => {
         this.setState({ products: data });
@@ -63,7 +63,7 @@ class Product extends Component {
         productId: productId,
       },
       withCredentials: true,
-      url: "http://localhost:5000/addreview",
+      url: "http://54.205.90.24:5000/addreview",
     }).then((res) => {
       console.log(res);
       window.location.reload(false);
@@ -85,7 +85,7 @@ class Product extends Component {
           productId: cartProduct,
         },
         withCredentials: true,
-        url: "http://localhost:5000/addtocart",
+        url: "http://54.205.90.24:5000/addtocart",
       }).then((res) => {
         console.log(res);
         alert(res.data);
@@ -99,7 +99,7 @@ class Product extends Component {
           productId: cartProduct,
         },
         withCredentials: true,
-        url: "http://localhost:5000/addtowishlist",
+        url: "http://54.205.90.24:5000/addtowishlist",
       }).then((res) => {
         console.log(res);
         alert(res.data);
