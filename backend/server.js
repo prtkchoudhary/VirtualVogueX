@@ -42,7 +42,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: "http://localhost:3000", // location of react frontend
+    origin: '*', // location of react frontend
     credentials: true,
   })
 );
@@ -68,7 +68,7 @@ app.get("/api/get-artoken", (req, res) => {
 
 
 // Use CORS to allow frontend access
-app.use(cors({ origin: "http://localhost:3000" })); // adjust for frontend URL
+app.use(cors({ origin: '*' })); // adjust for frontend URL
 
 // Route to send the API token
 app.get("/api/token", (req, res) => {
