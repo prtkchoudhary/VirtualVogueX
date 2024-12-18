@@ -68,7 +68,7 @@ class Shop extends Component {
 
   fetchAllProducts = () => {
     // Fetch all products from the server
-    fetch("https://54.205.90.24/getproducts")
+    fetch("https://54.205.90.24:5000/getproducts")
       .then((res) => res.json())
       .then((data) => {
         this.setState({ products: data });
